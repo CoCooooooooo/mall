@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_base_web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_base_web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_base_web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_base_web/src/main/webapp/WEB-INF/css/bootstrapValidator.min.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/super_base_web/src/main/webapp/WEB-INF/css/index.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/super_base_web/src/main/webapp/WEB-INF/js/bootstrapValidator.min.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/super_base_web/src/main/webapp/WEB-INF/js/jquery.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/super_base_web/src/main/webapp/WEB-INF/layer" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/super_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_dao/src/main/java/com" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_dao/src/main/java/com/market/dao/ProductTypeDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_dao/src/main/java/com/market/dao/UserDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_dao/src/main/java/com/market/mapper/UserMapper.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_dao/src/main/java/com/market/params/UserParam.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_front_web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/super_service/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

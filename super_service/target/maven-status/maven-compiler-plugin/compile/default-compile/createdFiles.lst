@@ -1,0 +1,15 @@
+com\market\service\Impl\ProductTypeServiceImpl.class
+com\market\vo\SysuserVo.class
+com\market\vo\UserVo.class
+com\market\service\RoleService.class
+com\market\service\SysuserService.class
+com\market\service\ProductTypeService.class
+com\market\service\UserService.class
+com\market\service\Impl\SysuserServiceImpl.class
+com\market\service\OrderService.class
+com\market\service\Impl\RoleServiceImpl.class
+com\market\service\Impl\ProductServiceImpl.class
+com\market\service\Impl\OrderServiceImpl.class
+com\market\service\Impl\UserServiceImpl.class
+com\market\service\ProductService.class
+com\market\dto\ProductDto.class

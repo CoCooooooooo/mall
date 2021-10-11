@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/super_base_web/super_base_web.iml" filepath="$PROJECT_DIR$/super_base_web/super_base_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_common/super_common.iml" filepath="$PROJECT_DIR$/super_common/super_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_dao/super_dao.iml" filepath="$PROJECT_DIR$/super_dao/super_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_front_web/super_front_web.iml" filepath="$PROJECT_DIR$/super_front_web/super_front_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_parent.iml" filepath="$PROJECT_DIR$/super_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_pojo/super_pojo.iml" filepath="$PROJECT_DIR$/super_pojo/super_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_service/super_service.iml" filepath="$PROJECT_DIR$/super_service/super_service.iml" />
+    </modules>
+  </component>
+</project>

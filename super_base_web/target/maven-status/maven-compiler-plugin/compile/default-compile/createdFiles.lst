@@ -1,0 +1,6 @@
+com\market\controller\UserController.class
+com\market\controller\ProductController.class
+com\market\controller\OrderController.class
+com\market\vo\ProductVo.class
+com\market\controller\ProductTypeController.class
+com\market\controller\SysuserController.class

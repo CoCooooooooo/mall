@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.market.dao.OrderDao">
+
+    <resultMap id="userMap" type="com.market.pojo.Order">
+        <id property="id" column="id"/>
+        <result property="code" column="code"/>
+        <result property="price" column="price"/>
+        <result property="cDate" column="create_date" jdbcType="DATE"/>
+        <association property="userId" javaType="User" column="customer_id">
+            <id property="id" column="u.id"/>
+            <result property="name" column="u.name"/>
+            <result property="phone" column="phone"/>
+        </association>
+    </resultMap>
+
+
+    <select id="selectAll" resultMap="userMap">
+        select o.id,o.code,o.customer_id,o.price,o.create_date,u.id 'u.id',u.name 'u.name',u.phone
+        from t_order o
+          left join t_user u
+          on o.customer_id=u.id
+    </select>
+
+    <insert id="add" parameterType="Order">
+        insert into t_order
+        values (#{code},#{customer_id},#{price},#{create_date})
+    </insert>
+
+
+</mapper>

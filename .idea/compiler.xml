@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="super_base_web" />
+        <module name="super_common" />
+        <module name="super_dao" />
+        <module name="super_front_web" />
+        <module name="super_pojo" />
+        <module name="super_service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="super_base_web" target="1.7" />
+      <module name="super_common" target="1.7" />
+      <module name="super_dao" target="1.7" />
+      <module name="super_front_web" target="1.7" />
+      <module name="super_parent" target="1.7" />
+      <module name="super_pojo" target="1.7" />
+      <module name="super_service" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.market.dao.ProductDao">
+    <resultMap id="productMap" type="com.market.pojo.Product">
+        <id property="id" column="id"/>
+        <result property="batch" column="batch"/>
+        <result property="name" column="name"/>
+        <result property="number" column="number"/>
+        <result property="price" column="price"/>
+        <result property="info" column="info"/>
+        <result property="image" column="image"/>
+        <result property="pDate" column="p_date" jdbcType="DATE"/>
+        <association property="productType" javaType="ProductType" column="product_type_id">
+            <id property="id" column="product_type_id"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="productMap2" type="Product">
+        <id property="id" column="id"/>
+        <result property="batch" column="batch"/>
+        <result property="name" column="name"/>
+        <result property="number" column="number"/>
+        <result property="saleNumber" column="sale_number"/>
+        <result property="price" column="price"/>
+        <result property="info" column="info"/>
+        <result property="image" column="image"/>
+        <result property="pDate" column="p_date" jdbcType="DATE"/>
+        <association property="productType" javaType="ProductType" column="product_type_id">
+            <id property="id" column="pt.id"/>
+            <result property="name" column="pt.name"/>
+            <result property="status" column="status"/>
+        </association>
+    </resultMap>
+
+    <sql id="productColumn">
+        id,
+        batch,
+        name,
+        number,
+        price,
+        info,
+        image,
+        product_type_id,
+        p_date
+    </sql>
+
+
+    <insert id="insert" parameterType="com.market.pojo.Product">
+        insert into t_product
+          (id,batch,name,number , price,info, image, product_type_id,p_date)
+        values
+          (#{id},#{batch},#{name},#{number},#{price},#{info},#{image},#{productType.id},#{pDate})
+    </insert>
+
+
+    <select id="selectByName" resultMap="productMap">
+        select <include refid="productColumn"/>
+        from t_product
+        where name=#{name}
+    </select>
+
+    <select id="selectAll" resultMap="productMap2">
+        select p.id,p.batch,p.name,p.number,p.sale_number,p.price,p.info,p.image,p.product_type_id,pt.id 'pt.id',pt.name 'pt.name',pt.status,p.p_date
+        from t_product p
+          left join t_product_type pt
+          on p.product_type_id=pt.id
+    </select>
+
+    <select id="selectById" resultMap="productMap">
+        select <include refid="productColumn"/>
+        from t_product
+        where id=#{id}
+    </select>
+
+    <update id="update" parameterType="Product">
+        update t_product
+        <set>
+            <if test="batch!=null and batch!=''">
+                batch=#{batch},
+            </if>
+            <if test="name!=null and name!=''">
+                name=#{name},
+            </if>
+            <if test="sale_number!=null">
+                sale_number=#{sale_number},
+            </if>
+            <if test="number!=null">
+                number=#{number},
+            </if>
+            <if test="price!=null and price!=''">
+                price=#{price},
+            </if>
+            <if test="info!=null and info!=''">
+                info=#{info},
+            </if>
+            <if test="image!=null and image!=''">
+                image=#{image},
+            </if>
+            <if test="product_type_id!=null and product_type_id!=''">
+                product_type_id=#{product_type_id},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteById">
+        delete from t_product
+        where id=#{id}
+    </delete>
+
+
+
+</mapper>

@@ -1,0 +1,8 @@
+com\market\params\SysuserParam.class
+com\market\dao\OrderDao.class
+com\market\params\UserParam.class
+com\market\dao\SysuserDao.class
+com\market\dao\RoleDao.class
+com\market\dao\ProductDao.class
+com\market\dao\UserDao.class
+com\market\dao\ProductTypeDao.class

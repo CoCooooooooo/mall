@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.market.dao.UserDao">
+    <resultMap id="userMap" type="User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="loginName" column="login_name"/>
+        <result property="password" column="password"/>
+        <result property="phone" column="phone"/>
+        <result property="address" column="address"/>
+        <result property="isValid" column="is_valid"/>
+    </resultMap>
+
+    <sql id="userColumn">
+        id,
+        name,
+        login_name,
+        password,
+        phone,
+        address,
+        is_valid
+    </sql>
+
+    <select id="selectAll" resultMap="userMap">
+        select id,name,login_name,password,phone,address,is_valid
+        from t_user
+    </select>
+
+    <select id="selectById" resultMap="userMap">
+        select <include refid="userColumn"/>
+        from t_user
+        where id=#{id}
+    </select>
+
+
+    <select id="selectByParams" parameterType="com.market.params.UserParam" resultMap="userMap">
+        select id,name,login_name,password,phone,address,is_valid
+        from t_user
+        <where>
+            <if test="name!=null and name!=''">
+                and name like concat(concat('%',#{name}),'%')
+            </if>
+            <if test="loginName!=null and loginName!=''">
+                and login_name like concat(concat('%',#{loginName}),'%')
+            </if>
+            <if test="phone!=null and phone!=''">
+                and phone=#{phone}
+            </if>
+            <if test="address!=null and address!=''">
+                and address=#{address}
+            </if>
+            <if test="isValid!=null and isValid!=-1">
+                and is_valid=#{isValid}
+            </if>
+        </where>
+    </select>
+
+    <insert id="insertUser" parameterType="User">
+        insert into t_user
+          (name, login_name, password, phone, address, is_valid)
+        values
+          (#{name},#{loginName},#{password},#{phone},#{address},#{isValid})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update t_user
+        set name=#{name},phone=#{phone},email=#{address}
+        where id=#{id}
+    </update>
+
+    <update id="updateStatus">
+        update t_user
+        set is_valid=#{isValid}
+        where id=#{id}
+    </update>
+</mapper>

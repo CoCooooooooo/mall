@@ -1,0 +1,7 @@
+com\market\pojo\Order.class
+com\market\pojo\User.class
+com\market\pojo\Product.class
+com\market\pojo\Customer.class
+com\market\pojo\Role.class
+com\market\pojo\Sysuser.class
+com\market\pojo\ProductType.class
